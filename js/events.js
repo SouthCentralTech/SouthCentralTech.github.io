@@ -32,7 +32,7 @@ function parseEventName(name) {
         var parts = name.split('-');
 
         if (parts.length >= 5) {
-            var date = parts.join('-', parts.slice(0, 3));
+            var date = parts.slice(0, 3).join('-');
             var description = parts[4].split('.')[0];
             
             return { name: parts[3], date: date, description: description };
